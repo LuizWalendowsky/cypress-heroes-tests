@@ -1,10 +1,11 @@
 // eslint-disable-next-line no-undef
 module.exports = {
-  env: { browser: true, es2020: true },
+  env: { browser: true, es2020: true, 'cypress/globals': true},
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:cypress'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },

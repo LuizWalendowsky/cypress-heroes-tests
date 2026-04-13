@@ -34,5 +34,4 @@ videos
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# OS
-.DS_Store
+
