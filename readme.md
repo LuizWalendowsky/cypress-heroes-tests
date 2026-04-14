@@ -1,58 +1,122 @@
-# Cypress Heroes Demo Application
+#  Cypress Heroes - Testes Automatizados e Manuais
 
-This is a demo application that shows how to use Cypress to run end-to-end,
-component, and API tests against an application.
+Projeto de testes com foco em QA (Quality Assurance), utilizando Cypress para automação E2E e testes manuais.
 
-## Getting Started
+---
 
-The app is a mono repo that uses npm workspaces. Once you clone the project,
-install the dependencies at the root folder:
+##  Sobre o Projeto
 
-```sh
+Validação das principais funcionalidades da aplicação Cypress Heroes:
+* Login
+* Listagem de heróis
+* Criação de heróis
+* Validações de formulário
+* Controle de acesso (UI)
+* Identificação de bugs
+
+---
+
+##  Projeto base
+
+A aplicação Cypress Heroes foi utilizada como base apenas para estudo.  
+Os testes automatizados e manuais foram desenvolvidos por mim.
+
+---
+
+## 🚀 Tecnologias
+
+* Cypress
+* JavaScript
+* Node.js
+* GitHub
+
+---
+
+##  Como executar o projeto
+
+```bash
+# Instalação e inicialização do ambiente
 npm install
-```
-
-After that a few more things need to be set up (databases and such), to do so run:
-
-```sh
 npm run setup
-```
-
-
-To launch the app for development, run:
-
-```sh
 npm run dev
 ```
 
-This will start both the client and server apps in dev mode. The site will be
-available at http://localhost:3000.
+Acesse: [http://localhost:3000](http://localhost:3000)
 
-## App Overview
+###  Executar os testes
 
-The Cypress Heroes app consists of a frontend client app written in React that
-uses Vite, as well as a backend app that uses NestJS.
+> ** Importante:** É necessário entrar na pasta `client` antes de rodar os comandos do Cypress.
 
-### React Client App
-
-The React client app is located in the **client** folder. It is a standard React [Vite](https://vitejs.dev/) app.
-
-Todo: fill out
-
-### NestJS Server App
-
-The server app is in the **server** folder. It is built with the [NestJS](https://nestjs.com/) Node.js framework. It uses [Prisma](https://www.prisma.io/) for the database ORM.
-
-#### Database seeding and resetting
-
-The database is seeded from the **server/prisma/seed.ts** script when you set up the app. If at any time you want to reset the database back to its initial state, run:
-
-```sh
-npm run resetdb
+**Abrir a interface do Cypress:**
+```bash
+cd client
+npx cypress open
 ```
 
-## Environment Variables
+**Rodar testes no terminal (Headless):**
+```bash
+cd client
+npx cypress run
+```
 
-The client app uses an environment variable to know what the URL is for the
-backend api named `VITE_API_URL`. It defaults to "http://localhost:3001" for use
-in dev mode, and should be overriden in other environments/modes.
+---
+
+##  Testes Automatizados
+
+### Login
+- [x] Login válido
+- [x] Email inválido
+- [x] Senha inválida
+- [x] Campos obrigatórios
+
+### Heróis
+- [x] Listagem de heróis
+- [x] Criação de herói
+- [x] Validação de campos obrigatórios
+- [x] Controle de permissão de usuário
+
+---
+
+##  Testes Manuais
+
+**Arquivo de evidência:** `/reports/testes-manuais-cypress-heroes.xlsx`
+
+---
+
+##  Bug encontrado
+
+**BUG-01 - Duplicidade de herói** O sistema permite criar heróis com os mesmos dados (nome, idade, poderes).
+
+* **Resultado esperado:** Não permitir duplicidade ou exibir erro de validação.
+* **Resultado atual:** Permite duplicação sem aviso ao usuário.
+* **Severidade:** Alta.
+* **Evidência:** `/reports/bugs/bug-duplicidade-heroi.png`
+
+---
+
+##  Estrutura do projeto
+
+```text
+cypress-heroes/
+├── client/
+├── server/
+├── cypress/
+├── reports/
+└── README.md
+```
+
+---
+
+##  Objetivo
+
+Praticar e demonstrar habilidades em:
+* Testes End-to-End (E2E)
+* Documentação de testes manuais
+* Report de bugs e evidências
+* Boas práticas de arquitetura para QA
+
+---
+
+##  Autor
+
+**Luiz Gustavo**
