@@ -23,7 +23,7 @@ Os testes automatizados e manuais foram desenvolvidos por mim.
 
 ---
 
-## 🚀 Tecnologias
+##  Tecnologias
 
 * Cypress
 * JavaScript
