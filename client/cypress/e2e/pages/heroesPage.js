@@ -31,6 +31,14 @@ class HeroesPage {
 
     cy.contains('Submit').click()
   }
+  clickEmpty() {
+    cy.contains('Submit').click()
+    cy.contains('Name is required').should('be.visible')
+    cy.contains('Price is required').should('be.visible')
+    cy.contains('Fans is required').should('be.visible')
+    cy.contains('Saves is required').should('be.visible')
+    cy.contains('Powers is required').should('be.visible')
+  }
 }
 
 export default new HeroesPage()
